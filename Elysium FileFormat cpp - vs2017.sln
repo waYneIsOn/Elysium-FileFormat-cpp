@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - libraries", "01 - libraries", "{B8EAED0D-C9B6-4425-9951-A0F2B25331FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Shared", "01 - Shared", "{953B5A27-E6A5-4251-9C07-E0574AEA5BDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Windows", "02 - Windows", "{CBE498B0-D4CA-4661-A876-FB247C238FE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Linux", "03 - Linux", "{2F369972-F00B-4001-AED6-AC178BF86E44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Android", "04 - Android", "{461A922A-F039-4372-9101-7863076E8EFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10 - unit tests", "10 - unit tests", "{E721D45E-8D07-4733-97ED-3CB14474D269}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Shared", "01 - Shared", "{F593BFA3-4E9B-4CEA-8085-1FBE2A39B9FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Windows", "02 - Windows", "{48C09F0A-3AC0-4C0E-9EEC-D245220F1A0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Linux", "03 - Linux", "{7AEC4D89-0E68-4C1F-B219-556D8537F322}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Android", "04 - Android", "{59E943F2-CEF9-48BE-B458-332B6F93FB05}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Pdf", "Libraries\01-Shared\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxitems", "{1DC43B39-C1E5-4604-9222-8831850B8EAD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Pdf", "Libraries\02-Windows\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxproj", "{3AD270CF-0C23-49EC-B782-7AC0D535AD35}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Libraries\01-Shared\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxitems*{1dc43b39-c1e5-4604-9222-8831850b8ead}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxitems*{3ad270cf-0c23-49ec-b782-7ac0d535ad35}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x64.ActiveCfg = Debug|x64
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x64.Build.0 = Debug|x64
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x86.ActiveCfg = Debug|Win32
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x86.Build.0 = Debug|Win32
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x64.ActiveCfg = Release|x64
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x64.Build.0 = Release|x64
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x86.ActiveCfg = Release|Win32
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{953B5A27-E6A5-4251-9C07-E0574AEA5BDA} = {B8EAED0D-C9B6-4425-9951-A0F2B25331FE}
+		{CBE498B0-D4CA-4661-A876-FB247C238FE9} = {B8EAED0D-C9B6-4425-9951-A0F2B25331FE}
+		{2F369972-F00B-4001-AED6-AC178BF86E44} = {B8EAED0D-C9B6-4425-9951-A0F2B25331FE}
+		{461A922A-F039-4372-9101-7863076E8EFE} = {B8EAED0D-C9B6-4425-9951-A0F2B25331FE}
+		{F593BFA3-4E9B-4CEA-8085-1FBE2A39B9FE} = {E721D45E-8D07-4733-97ED-3CB14474D269}
+		{48C09F0A-3AC0-4C0E-9EEC-D245220F1A0F} = {E721D45E-8D07-4733-97ED-3CB14474D269}
+		{7AEC4D89-0E68-4C1F-B219-556D8537F322} = {E721D45E-8D07-4733-97ED-3CB14474D269}
+		{59E943F2-CEF9-48BE-B458-332B6F93FB05} = {E721D45E-8D07-4733-97ED-3CB14474D269}
+		{1DC43B39-C1E5-4604-9222-8831850B8EAD} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35} = {CBE498B0-D4CA-4661-A876-FB247C238FE9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F280C747-B1F9-44C2-BEE0-5008B631C054}
+	EndGlobalSection
+EndGlobal
