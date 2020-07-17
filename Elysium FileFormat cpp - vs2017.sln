@@ -27,20 +27,51 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Pdf", "L
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Pdf", "Libraries\02-Windows\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxproj", "{3AD270CF-0C23-49EC-B782-7AC0D535AD35}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOpenXml.Word", "Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Word\Elysium.FileFormat.OfficeOpenXml.Word.vcxitems", "{5A3DF253-61E2-402E-BF16-B4CBCBBCAD75}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOpenXml.Excel", "Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Excel\Elysium.FileFormat.OfficeOpenXml.Excel.vcxitems", "{557777DA-A52E-46D7-B972-B5A512038E71}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOpenXml.PowerPoint", "Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.PowerPoint\Elysium.FileFormat.OfficeOpenXml.PowerPoint.vcxitems", "{F1F39854-880E-4BA6-B016-DE19E13FEA6A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOpenXml.OneNote", "Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.OneNote\Elysium.FileFormat.OfficeOpenXml.OneNote.vcxitems", "{A40FB1A4-7CBD-4353-96AE-4E0E8806E216}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOpenXml", "Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml\Elysium.FileFormat.OfficeOpenXml.vcxitems", "{0CAD1BFE-451A-4903-A8D1-E80577D7985B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOpenXml", "Libraries\02-Windows\Elysium.FileFormat.OfficeOpenXml\Elysium.FileFormat.OfficeOpenXml.vcxproj", "{6D833E71-7802-41C1-B5E3-662D696ECFBF}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml\Elysium.FileFormat.OfficeOpenXml.vcxitems*{0cad1bfe-451a-4903-a8d1-e80577d7985b}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxitems*{1dc43b39-c1e5-4604-9222-8831850b8ead}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxitems*{3ad270cf-0c23-49ec-b782-7ac0d535ad35}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Excel\Elysium.FileFormat.OfficeOpenXml.Excel.vcxitems*{557777da-a52e-46d7-b972-b5a512038e71}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Word\Elysium.FileFormat.OfficeOpenXml.Word.vcxitems*{5a3df253-61e2-402e-bf16-b4cbcbbcad75}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.OneNote\Elysium.FileFormat.OfficeOpenXml.OneNote.vcxitems*{a40fb1a4-7cbd-4353-96ae-4e0e8806e216}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.PowerPoint\Elysium.FileFormat.OfficeOpenXml.PowerPoint.vcxitems*{f1f39854-880e-4ba6-b016-de19e13fea6a}*SharedItemsImports = 9
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x64.ActiveCfg = Debug|x64
 		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x64.Build.0 = Debug|x64
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x86.ActiveCfg = Debug|Win32
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Debug|x86.Build.0 = Debug|Win32
 		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x64.ActiveCfg = Release|x64
 		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x64.Build.0 = Release|x64
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x86.ActiveCfg = Release|Win32
+		{3AD270CF-0C23-49EC-B782-7AC0D535AD35}.Release|x86.Build.0 = Release|Win32
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Debug|x64.ActiveCfg = Debug|x64
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Debug|x64.Build.0 = Debug|x64
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Debug|x86.ActiveCfg = Debug|Win32
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Debug|x86.Build.0 = Debug|Win32
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Release|x64.ActiveCfg = Release|x64
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Release|x64.Build.0 = Release|x64
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Release|x86.ActiveCfg = Release|Win32
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +87,12 @@ Global
 		{59E943F2-CEF9-48BE-B458-332B6F93FB05} = {E721D45E-8D07-4733-97ED-3CB14474D269}
 		{1DC43B39-C1E5-4604-9222-8831850B8EAD} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
 		{3AD270CF-0C23-49EC-B782-7AC0D535AD35} = {CBE498B0-D4CA-4661-A876-FB247C238FE9}
+		{5A3DF253-61E2-402E-BF16-B4CBCBBCAD75} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{557777DA-A52E-46D7-B972-B5A512038E71} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{F1F39854-880E-4BA6-B016-DE19E13FEA6A} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{A40FB1A4-7CBD-4353-96AE-4E0E8806E216} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{0CAD1BFE-451A-4903-A8D1-E80577D7985B} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{6D833E71-7802-41C1-B5E3-662D696ECFBF} = {CBE498B0-D4CA-4661-A876-FB247C238FE9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F280C747-B1F9-44C2-BEE0-5008B631C054}

@@ -2,6 +2,10 @@
 
 /.vs
 
+/Libraries/02-Windows/Elysium.FileFormat.OfficeOpenXml/Debug
+/Libraries/02-Windows/Elysium.FileFormat.OfficeOpenXml/Debugbin
+/Libraries/02-Windows/Elysium.FileFormat.OfficeOpenXml/Releasebin
+
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Debug
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Debugbin
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Releasebin

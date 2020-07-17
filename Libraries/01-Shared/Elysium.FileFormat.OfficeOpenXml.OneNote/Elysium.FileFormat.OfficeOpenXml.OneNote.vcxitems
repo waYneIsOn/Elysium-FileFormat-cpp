@@ -3,8 +3,8 @@
   <PropertyGroup Label="Globals">
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <ItemsProjectGuid>{1dc43b39-c1e5-4604-9222-8831850b8ead}</ItemsProjectGuid>
-    <ItemsRootNamespace>Elysium::FileFormat::Pdf</ItemsRootNamespace>
+    <ItemsProjectGuid>{a40fb1a4-7cbd-4353-96ae-4e0e8806e216}</ItemsProjectGuid>
+    <ItemsRootNamespace>Elysium::FileFormat::OfficeOpenXml::OneNote</ItemsRootNamespace>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -13,13 +13,5 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ProjectCapability Include="SourceItemsFromImports" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)API.hpp" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)PdfObject.hpp" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)PdfPageRotation.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)PdfObject.cpp" />
   </ItemGroup>
 </Project>
