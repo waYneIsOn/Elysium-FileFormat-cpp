@@ -12,8 +12,8 @@ Copyright (C) 2020 waYne (CAM)
 #pragma once
 #endif
 
-#ifndef ELYSIUM_CORE_INTEGER
-#include "../../../../Elysium-Core/Libraries/01-Shared/Elysium.Core/Integer.hpp"
+#ifndef ELYSIUM_CORE_PRIMITIVES
+#include "../../../../Elysium-Core/Libraries/01-Shared/Elysium.Core/Primitives.hpp"
 #endif
 
 namespace Elysium::FileFormat::PDF
@@ -27,8 +27,11 @@ namespace Elysium::FileFormat::PDF
 #endif
 	{
 		Normal = 0,
+
 		Rotate90 = 1,
+
 		Rotate180 = 2,
+
 		Rotate270 = 3
 	};
 }

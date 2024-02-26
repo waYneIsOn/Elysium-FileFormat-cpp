@@ -2,6 +2,10 @@
 
 /.vs
 
+/Libraries/02-Windows/Elysium.FileFormat.Imaging/Debug
+/Libraries/02-Windows/Elysium.FileFormat.Imaging/Debugbin
+/Libraries/02-Windows/Elysium.FileFormat.Imaging/Releasebin
+
 /Libraries/02-Windows/Elysium.FileFormat.OfficeOpenXml/Debug
 /Libraries/02-Windows/Elysium.FileFormat.OfficeOpenXml/Debugbin
 /Libraries/02-Windows/Elysium.FileFormat.OfficeOpenXml/Releasebin
@@ -9,3 +13,7 @@
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Debug
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Debugbin
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Releasebin
+
+/UnitTests/02-Windows/UnitTests.FileFormat.Imaging/Debug
+/UnitTests/02-Windows/UnitTests.FileFormat.Imaging/Debugbin
+/UnitTests/02-Windows/UnitTests.FileFormat.Imaging/Releasebin

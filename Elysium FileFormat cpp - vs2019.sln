@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1082
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - libraries", "01 - libraries", "{B8EAED0D-C9B6-4425-9951-A0F2B25331FE}"
 EndProject
@@ -39,15 +39,54 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.OfficeOpenXml", "Libraries\02-Windows\Elysium.FileFormat.OfficeOpenXml\Elysium.FileFormat.OfficeOpenXml.vcxproj", "{6D833E71-7802-41C1-B5E3-662D696ECFBF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat", "Libraries\01-Shared\Elysium.FileFormat\Elysium.FileFormat.vcxitems", "{590433F5-D639-4ACC-B2A7-402308B95E3A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Imaging", "Libraries\01-Shared\Elysium.FileFormat.Imaging\Elysium.FileFormat.Imaging.vcxitems", "{425D0344-FCFC-42F1-99D6-B8002B372B33}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Imaging", "Libraries\02-Windows\Elysium.FileFormat.Imaging\Elysium.FileFormat.Imaging.vcxproj", "{F278FC51-531D-41B9-9CA1-7FC08728A7B3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Imaging.Jpg", "Libraries\01-Shared\Elysium.FileFormat.Imaging.Jpg\Elysium.FileFormat.Imaging.Jpg.vcxitems", "{11718A26-6016-4333-A3B7-2DB25934B7F2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Imaging.Png", "Libraries\01-Shared\Elysium.FileFormat.Imaging.Png\Elysium.FileFormat.Imaging.Png.vcxitems", "{B64E45C4-16A8-46F8-A89E-CC551DA71471}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Imaging.Raw", "Libraries\01-Shared\Elysium.FileFormat.Imaging.Raw\Elysium.FileFormat.Imaging.Raw.vcxitems", "{0AC2367F-D138-434B-B8B8-CA7E5F316FD2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Imaging.Gif", "Libraries\01-Shared\Elysium.FileFormat.Imaging.Gif\Elysium.FileFormat.Imaging.Gif.vcxitems", "{0039A5A9-E3C4-47AD-BB6F-DC81EFF33916}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests.FileFormat.Imaging", "UnitTests\01-Shared\UnitTests.FileFormat.Imaging\UnitTests.FileFormat.Imaging.vcxitems", "{50B18146-47EA-4F7A-9F69-9ABB38A7B2D6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests.FileFormat.Imaging", "UnitTests\02-Windows\UnitTests.FileFormat.Imaging\UnitTests.FileFormat.Imaging.vcxproj", "{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Access", "Libraries\01-Shared\Elysium.FileFormat.Access\Elysium.FileFormat.Access.vcxitems", "{5A777BEE-ECAD-4EA2-B7D5-AEB1D1BCA7F3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Gif\Elysium.FileFormat.Imaging.Gif.vcxitems*{0039a5a9-e3c4-47ad-bb6f-dc81eff33916}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Raw\Elysium.FileFormat.Imaging.Raw.vcxitems*{0ac2367f-d138-434b-b8b8-ca7e5f316fd2}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml\Elysium.FileFormat.OfficeOpenXml.vcxitems*{0cad1bfe-451a-4903-a8d1-e80577d7985b}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Jpg\Elysium.FileFormat.Imaging.Jpg.vcxitems*{11718a26-6016-4333-a3b7-2db25934b7f2}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxitems*{1dc43b39-c1e5-4604-9222-8831850b8ead}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.Pdf\Elysium.FileFormat.Pdf.vcxitems*{3ad270cf-0c23-49ec-b782-7ac0d535ad35}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.Imaging\Elysium.FileFormat.Imaging.vcxitems*{425d0344-fcfc-42f1-99d6-b8002b372b33}*SharedItemsImports = 9
+		UnitTests\01-Shared\UnitTests.FileFormat.Imaging\UnitTests.FileFormat.Imaging.vcxitems*{50b18146-47ea-4f7a-9f69-9abb38a7b2d6}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Excel\Elysium.FileFormat.OfficeOpenXml.Excel.vcxitems*{557777da-a52e-46d7-b972-b5a512038e71}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat\Elysium.FileFormat.vcxitems*{590433f5-d639-4acc-b2a7-402308b95e3a}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Word\Elysium.FileFormat.OfficeOpenXml.Word.vcxitems*{5a3df253-61e2-402e-bf16-b4cbcbbcad75}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.Access\Elysium.FileFormat.Access.vcxitems*{5a777bee-ecad-4ea2-b7d5-aeb1d1bca7f3}*SharedItemsImports = 9
+		UnitTests\01-Shared\UnitTests.FileFormat.Imaging\UnitTests.FileFormat.Imaging.vcxitems*{685e69d0-cbeb-4169-bad1-f3ede1a5790c}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Excel\Elysium.FileFormat.OfficeOpenXml.Excel.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.OneNote\Elysium.FileFormat.OfficeOpenXml.OneNote.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.PowerPoint\Elysium.FileFormat.OfficeOpenXml.PowerPoint.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Word\Elysium.FileFormat.OfficeOpenXml.Word.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml\Elysium.FileFormat.OfficeOpenXml.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.OneNote\Elysium.FileFormat.OfficeOpenXml.OneNote.vcxitems*{a40fb1a4-7cbd-4353-96ae-4e0e8806e216}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Png\Elysium.FileFormat.Imaging.Png.vcxitems*{b64e45c4-16a8-46f8-a89e-cc551da71471}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.PowerPoint\Elysium.FileFormat.OfficeOpenXml.PowerPoint.vcxitems*{f1f39854-880e-4ba6-b016-de19e13fea6a}*SharedItemsImports = 9
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Gif\Elysium.FileFormat.Imaging.Gif.vcxitems*{f278fc51-531d-41b9-9ca1-7fc08728a7b3}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Jpg\Elysium.FileFormat.Imaging.Jpg.vcxitems*{f278fc51-531d-41b9-9ca1-7fc08728a7b3}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Png\Elysium.FileFormat.Imaging.Png.vcxitems*{f278fc51-531d-41b9-9ca1-7fc08728a7b3}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.Imaging.Raw\Elysium.FileFormat.Imaging.Raw.vcxitems*{f278fc51-531d-41b9-9ca1-7fc08728a7b3}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.Imaging\Elysium.FileFormat.Imaging.vcxitems*{f278fc51-531d-41b9-9ca1-7fc08728a7b3}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -72,6 +111,22 @@ Global
 		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Release|x64.Build.0 = Release|x64
 		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Release|x86.ActiveCfg = Release|Win32
 		{6D833E71-7802-41C1-B5E3-662D696ECFBF}.Release|x86.Build.0 = Release|Win32
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Debug|x64.ActiveCfg = Debug|x64
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Debug|x64.Build.0 = Debug|x64
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Debug|x86.ActiveCfg = Debug|Win32
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Debug|x86.Build.0 = Debug|Win32
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Release|x64.ActiveCfg = Release|x64
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Release|x64.Build.0 = Release|x64
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Release|x86.ActiveCfg = Release|Win32
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3}.Release|x86.Build.0 = Release|Win32
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Debug|x64.ActiveCfg = Debug|x64
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Debug|x64.Build.0 = Debug|x64
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Debug|x86.ActiveCfg = Debug|Win32
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Debug|x86.Build.0 = Debug|Win32
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Release|x64.ActiveCfg = Release|x64
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Release|x64.Build.0 = Release|x64
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Release|x86.ActiveCfg = Release|Win32
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +148,16 @@ Global
 		{A40FB1A4-7CBD-4353-96AE-4E0E8806E216} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
 		{0CAD1BFE-451A-4903-A8D1-E80577D7985B} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
 		{6D833E71-7802-41C1-B5E3-662D696ECFBF} = {CBE498B0-D4CA-4661-A876-FB247C238FE9}
+		{590433F5-D639-4ACC-B2A7-402308B95E3A} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{425D0344-FCFC-42F1-99D6-B8002B372B33} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{F278FC51-531D-41B9-9CA1-7FC08728A7B3} = {CBE498B0-D4CA-4661-A876-FB247C238FE9}
+		{11718A26-6016-4333-A3B7-2DB25934B7F2} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{B64E45C4-16A8-46F8-A89E-CC551DA71471} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{0AC2367F-D138-434B-B8B8-CA7E5F316FD2} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{0039A5A9-E3C4-47AD-BB6F-DC81EFF33916} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{50B18146-47EA-4F7A-9F69-9ABB38A7B2D6} = {F593BFA3-4E9B-4CEA-8085-1FBE2A39B9FE}
+		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C} = {48C09F0A-3AC0-4C0E-9EEC-D245220F1A0F}
+		{5A777BEE-ECAD-4EA2-B7D5-AEB1D1BCA7F3} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F280C747-B1F9-44C2-BEE0-5008B631C054}

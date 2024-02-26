@@ -1,0 +1,7 @@
+Jpg:
+====
+https://en.wikipedia.org/wiki/JPEG
+https://datatracker.ietf.org/doc/html/rfc2435
+http://www.vip.sugovica.hu/Sardi/kepnezo/JPEG%20File%20Layout%20and%20Format.htm
+
+https://www.w3.org/Graphics/JPEG/jfif3.pdf
