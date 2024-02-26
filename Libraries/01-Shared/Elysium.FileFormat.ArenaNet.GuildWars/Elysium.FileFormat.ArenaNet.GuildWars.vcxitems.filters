@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DAT">
+      <UniqueIdentifier>{6b414604-d24d-4d97-8b14-7bb19077a42f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Root.cpp">
+      <Filter>DAT</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)DATStream.cpp">
+      <Filter>DAT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Root.hpp">
+      <Filter>DAT</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)DATStream.hpp">
+      <Filter>DAT</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

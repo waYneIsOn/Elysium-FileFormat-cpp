@@ -1,6 +1,9 @@
 /bin
 
 /.vs
+/Libraries/02-Windows/Elysium.FileFormat.ArenaNet.GuildWars/Debug
+/Libraries/02-Windows/Elysium.FileFormat.ArenaNet.GuildWars/Debugbin
+/Libraries/02-Windows/Elysium.FileFormat.ArenaNet.GuildWars/Releasebin
 
 /Libraries/02-Windows/Elysium.FileFormat.Imaging/Debug
 /Libraries/02-Windows/Elysium.FileFormat.Imaging/Debugbin
@@ -13,6 +16,10 @@
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Debug
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Debugbin
 /Libraries/02-Windows/Elysium.FileFormat.Pdf/Releasebin
+
+/UnitTests/02-Windows/UnitTests.FileFormat.ArenaNet/Debug
+/UnitTests/02-Windows/UnitTests.FileFormat.ArenaNet/Debugbin
+/UnitTests/02-Windows/UnitTests.FileFormat.ArenaNet/Releasebin
 
 /UnitTests/02-Windows/UnitTests.FileFormat.Imaging/Debug
 /UnitTests/02-Windows/UnitTests.FileFormat.Imaging/Debugbin

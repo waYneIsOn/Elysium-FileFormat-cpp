@@ -59,6 +59,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests.FileFormat.Imagin
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.Access", "Libraries\01-Shared\Elysium.FileFormat.Access\Elysium.FileFormat.Access.vcxitems", "{5A777BEE-ECAD-4EA2-B7D5-AEB1D1BCA7F3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.ArenaNet.GuildWars", "Libraries\01-Shared\Elysium.FileFormat.ArenaNet.GuildWars\Elysium.FileFormat.ArenaNet.GuildWars.vcxitems", "{B463371D-5406-49B4-A3D2-F0317EC8A682}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Elysium.FileFormat.ArenaNet.GuildWars", "Libraries\02-Windows\Elysium.FileFormat.ArenaNet.GuildWars\Elysium.FileFormat.ArenaNet.GuildWars.vcxproj", "{B1290CAF-ECC2-47C2-BE9B-899A52584C76}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests.FileFormat.ArenaNet", "UnitTests\02-Windows\UnitTests.FileFormat.ArenaNet\UnitTests.FileFormat.ArenaNet.vcxproj", "{A71D1D8B-F386-432C-8249-4CCA53D523D4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests.FileFormat.ArenaNet", "UnitTests\01-Shared\UnitTests.FileFormat.ArenaNet\UnitTests.FileFormat.ArenaNet.vcxitems", "{7FE321E2-B3D8-4D4A-97EF-C0B1515058CC}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Libraries\01-Shared\Elysium.FileFormat.Imaging.Gif\Elysium.FileFormat.Imaging.Gif.vcxitems*{0039a5a9-e3c4-47ad-bb6f-dc81eff33916}*SharedItemsImports = 9
@@ -79,7 +87,11 @@ Global
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.PowerPoint\Elysium.FileFormat.OfficeOpenXml.PowerPoint.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.Word\Elysium.FileFormat.OfficeOpenXml.Word.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml\Elysium.FileFormat.OfficeOpenXml.vcxitems*{6d833e71-7802-41c1-b5e3-662d696ecfbf}*SharedItemsImports = 4
+		UnitTests\01-Shared\UnitTests.FileFormat.ArenaNet\UnitTests.FileFormat.ArenaNet.vcxitems*{7fe321e2-b3d8-4d4a-97ef-c0b1515058cc}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.OneNote\Elysium.FileFormat.OfficeOpenXml.OneNote.vcxitems*{a40fb1a4-7cbd-4353-96ae-4e0e8806e216}*SharedItemsImports = 9
+		UnitTests\01-Shared\UnitTests.FileFormat.ArenaNet\UnitTests.FileFormat.ArenaNet.vcxitems*{a71d1d8b-f386-432c-8249-4cca53d523d4}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.ArenaNet.GuildWars\Elysium.FileFormat.ArenaNet.GuildWars.vcxitems*{b1290caf-ecc2-47c2-be9b-899a52584c76}*SharedItemsImports = 4
+		Libraries\01-Shared\Elysium.FileFormat.ArenaNet.GuildWars\Elysium.FileFormat.ArenaNet.GuildWars.vcxitems*{b463371d-5406-49b4-a3d2-f0317ec8a682}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.Imaging.Png\Elysium.FileFormat.Imaging.Png.vcxitems*{b64e45c4-16a8-46f8-a89e-cc551da71471}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.OfficeOpenXml.PowerPoint\Elysium.FileFormat.OfficeOpenXml.PowerPoint.vcxitems*{f1f39854-880e-4ba6-b016-de19e13fea6a}*SharedItemsImports = 9
 		Libraries\01-Shared\Elysium.FileFormat.Imaging.Gif\Elysium.FileFormat.Imaging.Gif.vcxitems*{f278fc51-531d-41b9-9ca1-7fc08728a7b3}*SharedItemsImports = 4
@@ -127,6 +139,22 @@ Global
 		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Release|x64.Build.0 = Release|x64
 		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Release|x86.ActiveCfg = Release|Win32
 		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C}.Release|x86.Build.0 = Release|Win32
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Debug|x64.ActiveCfg = Debug|x64
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Debug|x64.Build.0 = Debug|x64
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Debug|x86.ActiveCfg = Debug|Win32
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Debug|x86.Build.0 = Debug|Win32
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Release|x64.ActiveCfg = Release|x64
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Release|x64.Build.0 = Release|x64
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Release|x86.ActiveCfg = Release|Win32
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76}.Release|x86.Build.0 = Release|Win32
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Debug|x64.ActiveCfg = Debug|x64
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Debug|x64.Build.0 = Debug|x64
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Debug|x86.ActiveCfg = Debug|Win32
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Debug|x86.Build.0 = Debug|Win32
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Release|x64.ActiveCfg = Release|x64
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Release|x64.Build.0 = Release|x64
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Release|x86.ActiveCfg = Release|Win32
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,6 +186,10 @@ Global
 		{50B18146-47EA-4F7A-9F69-9ABB38A7B2D6} = {F593BFA3-4E9B-4CEA-8085-1FBE2A39B9FE}
 		{685E69D0-CBEB-4169-BAD1-F3EDE1A5790C} = {48C09F0A-3AC0-4C0E-9EEC-D245220F1A0F}
 		{5A777BEE-ECAD-4EA2-B7D5-AEB1D1BCA7F3} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{B463371D-5406-49B4-A3D2-F0317EC8A682} = {953B5A27-E6A5-4251-9C07-E0574AEA5BDA}
+		{B1290CAF-ECC2-47C2-BE9B-899A52584C76} = {CBE498B0-D4CA-4661-A876-FB247C238FE9}
+		{A71D1D8B-F386-432C-8249-4CCA53D523D4} = {48C09F0A-3AC0-4C0E-9EEC-D245220F1A0F}
+		{7FE321E2-B3D8-4D4A-97EF-C0B1515058CC} = {F593BFA3-4E9B-4CEA-8085-1FBE2A39B9FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F280C747-B1F9-44C2-BEE0-5008B631C054}
