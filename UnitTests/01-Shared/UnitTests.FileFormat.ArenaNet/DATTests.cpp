@@ -73,14 +73,14 @@ namespace UnitTestsFileFormatArenaNet
 				for (Elysium::Core::Template::Container::Vector<Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry>::ConstIterator Iterator = Entries.GetBegin();
 					Iterator != Entries.GetEnd(); ++Iterator, ++Index)
 				{
-					// skip all "reserved" blocks for now
-					if (Index < 15)
-					{
-						continue;
-					}
+					EntryContent Content = Stream.GetEntryContent(*Iterator);
 
-					Stream.ReadEntryContent(*Iterator, Index);
+					bool fla = false;
+
+					//Stream.PerformTypeTests(*Iterator, Index);
 				}
+
+				bool sdfds = false;
 			}
 			catch (const Elysium::Core::IO::IOException& ex)
 			{

@@ -28,6 +28,10 @@ Copyright (C) 2020 waYne (CAM)
 #include "../../../../Elysium-Core/Libraries/01-Shared/Elysium.Core.Template/Vector.hpp"
 #endif
 
+#ifndef ELYSIUM_FILEFORMAT_ARENANET_GUILDWARS_DAT_ENTRYCONTENT
+#include "EntryContent.hpp"
+#endif
+
 #ifndef ELYSIUM_FILEFORMAT_ARENANET_GUILDWARS_DAT_MFTHEADER
 #include "MFTHeader.hpp"
 #endif
@@ -65,7 +69,9 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 
 		const bool ReadMainFileTableEntries();
 	public:
-		const bool ReadEntryContent(const MFTEntry& Entry, const Elysium::Core::uint32_t Index);
+		const EntryContent GetEntryContent(const MFTEntry& Entry);
+
+		const bool PerformTypeTests(const MFTEntry& Entry, const Elysium::Core::uint32_t Index);
 	private:
 		void Read(Elysium::Core::byte* Buffer, const Elysium::Core::size BufferSize);
 	private:

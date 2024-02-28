@@ -37,7 +37,7 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 
 		Elysium::Core::uint64_t _MftOffset;
 		Elysium::Core::uint32_t _MftSize;
-		Elysium::Core::uint32_t _Unknown;
+		Elysium::Core::uint32_t _Unknown3;
 	private:
 		inline const static Elysium::Core::uint8_t _ExpectedType = 0x33;
 		inline const static char _ExpectedMagic[2] = { 'A', 'N' };

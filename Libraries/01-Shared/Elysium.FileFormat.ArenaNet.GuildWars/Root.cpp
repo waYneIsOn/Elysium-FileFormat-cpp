@@ -39,7 +39,7 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::Root::Validate() const
 		return false;
 	}
 
-	if (_Unknown != 0x00)
+	if (_Unknown3 != 0x00)
 	{
 		return false;
 	}

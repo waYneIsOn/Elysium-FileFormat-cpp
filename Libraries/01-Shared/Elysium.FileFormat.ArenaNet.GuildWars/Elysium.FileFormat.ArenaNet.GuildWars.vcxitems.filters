@@ -21,6 +21,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MFTEntry.cpp">
       <Filter>DAT</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)EntryContent.cpp">
+      <Filter>DAT</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Root.hpp">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)API.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)FileType.hpp">
+      <Filter>DAT</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)EntryContent.hpp">
       <Filter>DAT</Filter>
     </ClInclude>
   </ItemGroup>

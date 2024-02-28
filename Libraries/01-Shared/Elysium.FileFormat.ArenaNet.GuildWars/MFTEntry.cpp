@@ -25,17 +25,17 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry::Validate() c
 	{
 	}
 	
-	if (_Content != 0x00)
+	if (_Unknown1 != 0x00)
 	{
 
 	}
 
-	if (_ContentType != 0x00)
+	if (_Unknown2 != 0x00)
 	{
 
 	}
 
-	if (_Unknown != 0x00)
+	if (_Unknown3 != 0x00)
 	{
 
 	}
@@ -71,11 +71,11 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry::GetIsCompres
 
 const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry::GetHasContent() const
 {
-	if (_Content != 0x00 && _Content != 0x01 && _Content != 0x03)
+	if (_Unknown1 != 0x00 && _Unknown1 != 0x01 && _Unknown1 != 0x03)
 	{	// @ToDo: not encountered any other values in dat-file so far. this might be something "new"
 		throw 1;
 	}
 
-	return _Content != 0x00;
+	return _Unknown1 != 0x00;
 }
 

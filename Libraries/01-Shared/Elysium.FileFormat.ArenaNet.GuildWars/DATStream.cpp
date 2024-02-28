@@ -73,12 +73,12 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadMainFil
 		return false;
 	}
 
-	if (Entry._Content != 0x03)
+	if (Entry._Unknown1 != 0x03)
 	{	// has content
 		return false;
 	}
 
-	if (Entry._ContentType != 0x00)
+	if (Entry._Unknown2 != 0x00)
 	{	// ?
 		return false;
 	}
@@ -95,12 +95,12 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadMainFil
 		return false;
 	}
 
-	if (Entry._Content != 0x03)
+	if (Entry._Unknown1 != 0x03)
 	{
 		return false;
 	}
 
-	if (Entry._ContentType != 0x00)
+	if (Entry._Unknown2 != 0x00)
 	{
 		return false;
 	}
@@ -127,12 +127,12 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadMainFil
 		return false;
 	}
 
-	if (Entry._Content != 0x03)
+	if (Entry._Unknown1 != 0x03)
 	{
 		return false;
 	}
 
-	if (Entry._ContentType != 0x00)
+	if (Entry._Unknown2 != 0x00)
 	{
 		return false;
 	}
@@ -161,12 +161,12 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadMainFil
 			return false;
 		}
 
-		if (Entry._Content != 0x00)
+		if (Entry._Unknown1 != 0x00)
 		{
 			return false;
 		}
 
-		if (Entry._ContentType != 0x00)
+		if (Entry._Unknown2 != 0x00)
 		{
 			return false;
 		}
@@ -196,8 +196,110 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadMainFil
 	return true;
 }
 
-const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadEntryContent(const MFTEntry& Entry, const Elysium::Core::uint32_t Index)
+const Elysium::FileFormat::ArenaNet::GuildWars::DAT::EntryContent Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::GetEntryContent(const MFTEntry& Entry)
 {
+	EntryContent Content = EntryContent();
+
+	// handle root block reference specifically [entry 0]
+	if (Entry._Size != 0x00 && Entry._Offset == 0x00)
+	{
+		Content._Type = Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::RootBlockReference;
+		Content._UncompressedSize = Entry._Size;
+
+		return Content;
+	}
+
+	// handle hashlist specifically [entry 1]
+	{
+		// @ToDo
+	}
+
+	// handle main file table header reference specifically [entry 2]
+	if(Entry._Offset == _RootBlock._MftOffset)
+	{
+		if (Entry._Size != _RootBlock._MftSize)
+		{	// @ToDo: throw specific exception (this should never happen if the file isn't corrupted!)
+			throw 1;
+		}
+
+		Content._Type = Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::MainFileTableHeaderReference;
+		Content._UncompressedSize = Entry._Size;
+
+		return Content;
+	}
+
+	// handle entries without content specifically [entries 3 - 14] (seems like only reserved entries have no content)
+	if (Entry._Size == 0x00)
+	{
+		if (Entry._Compression || Entry._Unknown1 || Entry._Unknown2)
+		{	// @ToDo: throw specific exception (this should never happen if the file isn't corrupted!)
+			throw 1;
+		}
+
+		Content._Type = Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::ReservedEntry;
+
+		return Content;
+	}
+
+	// handle all remaining cases
+	Elysium::Core::byte* UncompressedData = nullptr;
+
+	if (Entry.GetIsCompressed())
+	{
+		Elysium::Core::byte* CompressedData = new Elysium::Core::byte[Entry._Size];
+
+		_SourceStream.SetPosition(Entry._Offset);
+		_SourceStream.Read(CompressedData, Entry._Size);
+
+		// @ToDo: uncompress into UncompressedData
+
+		delete[] CompressedData;
+
+
+
+		Content._Type = Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::CompressedValueToBeDeleted;
+
+		return Content;
+	}
+	else
+	{
+		UncompressedData = new Elysium::Core::byte[Entry._Size];
+
+		_SourceStream.SetPosition(Entry._Offset);
+		_SourceStream.Read(UncompressedData, Entry._Size);
+
+		Content._UncompressedSize = Entry._Size;
+	}
+
+	if (UncompressedData == nullptr)
+	{	// @ToDo: throw specific exception (this should never happen if the file isn't corrupted!)
+		throw 1;
+	}
+
+	const Elysium::Core::uint32_t* UnderlyingFileType = reinterpret_cast<Elysium::Core::uint32_t*>(&UncompressedData[0]);
+	Content._Type = static_cast<Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType>(*UnderlyingFileType);
+	Content._Data.Reserve(Entry._Size);
+	Content._Data.PushBackRange(UncompressedData, Entry._Size);
+
+	delete[] UncompressedData;
+
+	return Content;
+}
+
+const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::PerformTypeTests(const MFTEntry& Entry, const Elysium::Core::uint32_t Index)
+{
+	// skip entry referencing root block
+	if (Entry._Size != 0x00 && Entry._Offset == 0x00)
+	{
+		return true;
+	}
+
+	// skip any entries without content
+	if (Entry._Size == 0x00)
+	{
+		return true;
+	}
+	
 	Elysium::Core::byte* UncompressedData = nullptr;
 
 	// read uncompressed data
@@ -231,8 +333,12 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadEntryCo
 	const Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType FileType =
 		static_cast<Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType>(*UnderlyingFileType);
 
-	if (FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::ArenaNetTexture &&
+	if (FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::RootBlockReference &&
+		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::ArenaNetTexture &&
 		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::ArenaNetFileFormat &&
+
+		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::Entry2Hashlist &&
+		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::MainFileTableHeaderReference &&
 
 		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::Unknown1 &&
 		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::Unknown2 &&
@@ -414,7 +520,6 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::ReadEntryCo
 		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::Unknown178 &&
 		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::Unknown179 &&
 		FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::Unknown180
-
 		)
 	{
 		bool bla = false;

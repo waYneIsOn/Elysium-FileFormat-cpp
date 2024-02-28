@@ -34,22 +34,46 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 #error "undefined os"
 #endif
 	{
+		Unknown = 0,
+
+		RootBlockReference = 441336115,
+
+		Entry2Hashlist = 381384,
+
+		MainFileTableHeaderReference = 443835981,
+
+		ReservedEntry = 1,
+
+
+
+
+		CompressedValueToBeDeleted = 2,
+
+
+
+
+
 		ArenaNetTexture = 1480938561,
 
 		ArenaNetFileFormat = 1634625126,
 
 
 
-		Unknown1 = 3078714045,
-		Unknown53 = 3759603714,
+
+
+
+
+		Unknown31 = 6029055,
 
 		Unknown49 = 307237804,
 		Unknown80 = 307237805,
 		Unknown81 = 307237797,
 		Unknown127 = 307237800,
 		Unknown128 = 307237795,
+		
+		Unknown1 = 3078714045,
+		Unknown53 = 3759603714,
 
-		Unknown31 = 6029055,
 
 		Unknown2 = 33627558,
 		Unknown3 = 33627506,
