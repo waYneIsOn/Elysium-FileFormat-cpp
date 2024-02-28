@@ -5,4 +5,7 @@
       <UniqueIdentifier>{66c733ae-1962-4885-aba9-b732ef55b3a8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)DATTests.cpp" />
+  </ItemGroup>
 </Project>

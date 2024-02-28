@@ -24,6 +24,18 @@ Copyright (C) 2020 waYne (CAM)
 #include "../../../../Elysium-Core/Libraries/01-Shared/Elysium.Core.IO/FileStream.hpp"
 #endif
 
+#ifndef ELYSIUM_CORE_TEMPLATE_CONTAINER_VECTOR
+#include "../../../../Elysium-Core/Libraries/01-Shared/Elysium.Core.Template/Vector.hpp"
+#endif
+
+#ifndef ELYSIUM_FILEFORMAT_ARENANET_GUILDWARS_DAT_MFTHEADER
+#include "MFTHeader.hpp"
+#endif
+
+#ifndef ELYSIUM_FILEFORMAT_ARENANET_GUILDWARS_DAT_MFTENTRY
+#include "MFTEntry.hpp"
+#endif
+
 #ifndef ELYSIUM_FILEFORMAT_ARENANET_GUILDWARS_DAT_ROOT
 #include "Root.hpp"
 #endif
@@ -45,9 +57,23 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 
 		DATStream& operator=(DATStream&& Right) noexcept = delete;
 	public:
-		void ReadRoot();
+		const Elysium::Core::Template::Container::Vector<MFTEntry>& GetEntries() const;
+	public:
+		const bool ReadRootBlock();
+
+		const bool ReadMainFileTableHeader();
+
+		const bool ReadMainFileTableEntries();
+	public:
+		const bool ReadEntryContent(const MFTEntry& Entry);
 	private:
-		Elysium::Core::IO::FileStream _Stream;
+		void Read(Elysium::Core::byte* Buffer, const Elysium::Core::size BufferSize);
+	private:
+		Elysium::Core::IO::FileStream _SourceStream;
+
+		Root _RootBlock;
+		MFTHeader _MainFileTableHeader;
+		Elysium::Core::Template::Container::Vector<MFTEntry> _Entries;
 	};
 }
 #endif

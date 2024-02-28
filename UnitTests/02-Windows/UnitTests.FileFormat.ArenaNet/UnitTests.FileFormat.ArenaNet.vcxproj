@@ -113,6 +113,14 @@
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;..\..\..\..\bin\$(Configuration)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Elysium.Core.lib;Elysium.FileFormat.ArenaNet.GuildWars.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(TargetDir)TestFiles" mkdir "$(TargetDir)TestFiles"
+if not exist "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" mkdir "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet"
+
+xcopy "$(SolutionDir)UnitTests\01-Shared\UnitTests.FileFormat.ArenaNet\TestFiles" "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" /Y /E
+
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -131,6 +139,14 @@
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;..\..\..\..\bin\$(Configuration)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Elysium.Core.lib;Elysium.FileFormat.ArenaNet.GuildWars.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(TargetDir)TestFiles" mkdir "$(TargetDir)TestFiles"
+if not exist "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" mkdir "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet"
+
+xcopy "$(SolutionDir)UnitTests\01-Shared\UnitTests.FileFormat.ArenaNet\TestFiles" "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" /Y /E
+
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -153,6 +169,14 @@
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;..\..\..\..\bin\$(Configuration)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Elysium.Core.lib;Elysium.FileFormat.ArenaNet.GuildWars.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(TargetDir)TestFiles" mkdir "$(TargetDir)TestFiles"
+if not exist "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" mkdir "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet"
+
+xcopy "$(SolutionDir)UnitTests\01-Shared\UnitTests.FileFormat.ArenaNet\TestFiles" "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" /Y /E
+
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -175,6 +199,14 @@
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;..\..\..\..\bin\$(Configuration)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>Elysium.Core.lib;Elysium.FileFormat.ArenaNet.GuildWars.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(TargetDir)TestFiles" mkdir "$(TargetDir)TestFiles"
+if not exist "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" mkdir "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet"
+
+xcopy "$(SolutionDir)UnitTests\01-Shared\UnitTests.FileFormat.ArenaNet\TestFiles" "$(TargetDir)TestFiles\UnitTests.FileFormat.ArenaNet" /Y /E
+
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Libraries\02-Windows\Elysium.FileFormat.ArenaNet.GuildWars\Elysium.FileFormat.ArenaNet.GuildWars.vcxproj">

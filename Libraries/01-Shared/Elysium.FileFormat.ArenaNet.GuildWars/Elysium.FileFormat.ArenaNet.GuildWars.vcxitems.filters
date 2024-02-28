@@ -4,12 +4,21 @@
     <Filter Include="DAT">
       <UniqueIdentifier>{6b414604-d24d-4d97-8b14-7bb19077a42f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ANFF">
+      <UniqueIdentifier>{a9f5700b-6937-422f-9909-d86a027a4f33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Root.cpp">
       <Filter>DAT</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)DATStream.cpp">
+      <Filter>DAT</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MFTHeader.cpp">
+      <Filter>DAT</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MFTEntry.cpp">
       <Filter>DAT</Filter>
     </ClCompile>
   </ItemGroup>
@@ -20,5 +29,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)DATStream.hpp">
       <Filter>DAT</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MFTHeader.hpp">
+      <Filter>DAT</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MFTEntry.hpp">
+      <Filter>DAT</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)API.hpp" />
   </ItemGroup>
 </Project>
