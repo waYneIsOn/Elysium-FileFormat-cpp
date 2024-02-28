@@ -37,6 +37,8 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 		Elysium::Core::uint32_t _CRCChecksum;
 	public:
 		const bool GetIsCompressed() const;
+
+		const bool GetHasContent() const;
 	};
 }
 #endif

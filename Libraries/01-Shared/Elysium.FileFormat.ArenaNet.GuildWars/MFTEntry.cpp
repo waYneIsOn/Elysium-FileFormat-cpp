@@ -66,5 +66,16 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry::GetIsCompres
 		throw 1;
 	}
 
-	return _Compression == 0x08;
+	return _Compression != 0x00;
 }
+
+const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry::GetHasContent() const
+{
+	if (_Content != 0x00 && _Content != 0x01 && _Content != 0x03)
+	{	// @ToDo: not encountered any other values in dat-file so far. this might be something "new"
+		throw 1;
+	}
+
+	return _Content != 0x00;
+}
+

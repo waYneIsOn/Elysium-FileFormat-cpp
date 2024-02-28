@@ -67,12 +67,19 @@ namespace UnitTestsFileFormatArenaNet
 					Assert::Fail(L"Main file table entries are not valid!");
 				}
 				
+				Elysium::Core::uint32_t Index = 0;
 				const Elysium::Core::Template::Container::Vector<Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry>& Entries =
 					Stream.GetEntries();
 				for (Elysium::Core::Template::Container::Vector<Elysium::FileFormat::ArenaNet::GuildWars::DAT::MFTEntry>::ConstIterator Iterator = Entries.GetBegin();
-					Iterator != Entries.GetEnd(); ++Iterator)
+					Iterator != Entries.GetEnd(); ++Iterator, ++Index)
 				{
-					Stream.ReadEntryContent(*Iterator);
+					// skip all "reserved" blocks for now
+					if (Index < 15)
+					{
+						continue;
+					}
+
+					Stream.ReadEntryContent(*Iterator, Index);
 				}
 			}
 			catch (const Elysium::Core::IO::IOException& ex)

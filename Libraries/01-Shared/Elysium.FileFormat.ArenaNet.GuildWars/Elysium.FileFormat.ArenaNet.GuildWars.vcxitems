@@ -17,6 +17,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)API.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)DATStream.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)FileType.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MFTEntry.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)MFTHeader.hpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Root.hpp" />
@@ -26,5 +27,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MFTEntry.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)MFTHeader.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Root.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
   </ItemGroup>
 </Project>

@@ -65,7 +65,7 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 
 		const bool ReadMainFileTableEntries();
 	public:
-		const bool ReadEntryContent(const MFTEntry& Entry);
+		const bool ReadEntryContent(const MFTEntry& Entry, const Elysium::Core::uint32_t Index);
 	private:
 		void Read(Elysium::Core::byte* Buffer, const Elysium::Core::size BufferSize);
 	private:
