@@ -74,6 +74,8 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 		const bool PerformTypeTests(const MFTEntry& Entry, const Elysium::Core::uint32_t Index);
 	private:
 		void Read(Elysium::Core::byte* Buffer, const Elysium::Core::size BufferSize);
+
+		Elysium::Core::byte* Decompress(Elysium::Core::byte* Input, const Elysium::Core::size InputSize, Elysium::Core::size* OutputSize);
 	private:
 		Elysium::Core::IO::FileStream _SourceStream;
 

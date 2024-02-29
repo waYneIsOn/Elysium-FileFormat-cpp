@@ -47,12 +47,6 @@ namespace Elysium::FileFormat::ArenaNet::GuildWars::DAT
 
 
 
-		CompressedValueToBeDeleted = 2,
-
-
-
-
-
 		ArenaNetTexture = 1480938561,
 
 		ArenaNetFileFormat = 1634625126,

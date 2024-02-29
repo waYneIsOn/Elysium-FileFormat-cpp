@@ -243,6 +243,7 @@ const Elysium::FileFormat::ArenaNet::GuildWars::DAT::EntryContent Elysium::FileF
 
 	// handle all remaining cases
 	Elysium::Core::byte* UncompressedData = nullptr;
+	Elysium::Core::size UncompressedSize = Entry._Size;
 
 	if (Entry.GetIsCompressed())
 	{
@@ -251,15 +252,9 @@ const Elysium::FileFormat::ArenaNet::GuildWars::DAT::EntryContent Elysium::FileF
 		_SourceStream.SetPosition(Entry._Offset);
 		_SourceStream.Read(CompressedData, Entry._Size);
 
-		// @ToDo: uncompress into UncompressedData
+		UncompressedData = Decompress(CompressedData, Entry._Size, &UncompressedSize);
 
 		delete[] CompressedData;
-
-
-
-		Content._Type = Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::CompressedValueToBeDeleted;
-
-		return Content;
 	}
 	else
 	{
@@ -278,8 +273,10 @@ const Elysium::FileFormat::ArenaNet::GuildWars::DAT::EntryContent Elysium::FileF
 
 	const Elysium::Core::uint32_t* UnderlyingFileType = reinterpret_cast<Elysium::Core::uint32_t*>(&UncompressedData[0]);
 	Content._Type = static_cast<Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType>(*UnderlyingFileType);
-	Content._Data.Reserve(Entry._Size);
-	Content._Data.PushBackRange(UncompressedData, Entry._Size);
+
+	// copy data without 
+	Content._Data.Reserve(UncompressedSize - sizeof(Elysium::Core::uint32_t));
+	Content._Data.PushBackRange(&UncompressedData[sizeof(Elysium::Core::uint32_t)], UncompressedSize - sizeof(Elysium::Core::uint32_t));
 
 	delete[] UncompressedData;
 
@@ -301,8 +298,9 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::PerformType
 	}
 	
 	Elysium::Core::byte* UncompressedData = nullptr;
+	Elysium::Core::size UncompressedSize = Entry._Size;
 
-	// read uncompressed data
+	// get uncompressed data
 	if (Entry.GetIsCompressed())
 	{
 		Elysium::Core::byte* CompressedData = new Elysium::Core::byte[Entry._Size];
@@ -310,7 +308,7 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::PerformType
 		_SourceStream.SetPosition(Entry._Offset);
 		_SourceStream.Read(CompressedData, Entry._Size);
 
-		// @ToDo: uncompress into UncompressedData
+		UncompressedData = Decompress(CompressedData, Entry._Size, &UncompressedSize);
 
 		delete[] CompressedData;
 	}
@@ -324,13 +322,12 @@ const bool Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::PerformType
 
 	// process uncompressed data
 	if (UncompressedData == nullptr)
-	{
+	{	// @ToDo: throw specific exception (this should never happen if the file isn't corrupted!)
 		return false;
 	}
 
 	const Elysium::Core::uint32_t* UnderlyingFileType = reinterpret_cast<Elysium::Core::uint32_t*>(&UncompressedData[0]);
-
-	const Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType FileType =
+	const Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType FileType = 
 		static_cast<Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType>(*UnderlyingFileType);
 
 	if (FileType != Elysium::FileFormat::ArenaNet::GuildWars::DAT::FileType::RootBlockReference &&
@@ -539,4 +536,17 @@ void Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::Read(Elysium::Cor
 		const Elysium::Core::size BytesRead = _SourceStream.Read(&Buffer[TotalBytesRead], BufferSize - TotalBytesRead);
 		TotalBytesRead += BytesRead;
 	} while (TotalBytesRead != BufferSize);
+}
+
+Elysium::Core::byte* Elysium::FileFormat::ArenaNet::GuildWars::DAT::DATStream::Decompress(Elysium::Core::byte* Input, const Elysium::Core::size InputSize, Elysium::Core::size* OutputSize)
+{
+	// @ToDo: actually decompress
+
+
+
+
+	*OutputSize = sizeof(Elysium::Core::uint32_t);
+	Elysium::Core::byte* UncompressedData = new Elysium::Core::byte[] { 0x00, 0x00, 0x00, 0x00 };
+
+	return UncompressedData;
 }
